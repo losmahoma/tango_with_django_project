@@ -8,6 +8,19 @@
 hey there partner! <br />
 <strong>{{ boldmessage }}</strong><br /> </div>
 <div>
+    <div>
+        {% if categories %}
+        <ul>
+        {% for category in categories %}
+        <li>
+            <a href="/rango/category/{{ category.slug }}a/">{{ category.name }}</a>       
+         </li> 
+        {% endfor %}
+        </ul> 
+        {% else %}
+        <strong>There are no categories present.</strong> 
+        {% endif %}
+        </div>        
 <a href="/rango/about/">About</a><br />
 L1-0 <img src="/static/images/screenshot.jpg" alt="Picture of Rango" />
 </div> </body>
